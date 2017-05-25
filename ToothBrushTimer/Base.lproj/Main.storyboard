@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToothBrushTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7d6-o5-vd9">
+                                <rect key="frame" x="139.5" y="449" width="96" height="69"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleColor" red="1" green="0.097502633892680657" blue="0.098343756197885934" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="timerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Sq-Wj-KoF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Toothbrush Timer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-C3-63v">
+                                <rect key="frame" x="31.5" y="60" width="312.5" height="57"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.097502633889999996" blue="0.098343756199999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jtu-Zk-0K8">
+                                <rect key="frame" x="0.0" y="164" width="375" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="k0W-BR-wZr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="75"/>
+                                <color key="textColor" red="1" green="0.95608591133040877" blue="0.055063623268687856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16475862488541249" green="0.75045043825340785" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7d6-o5-vd9" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="150" id="8Fe-Bn-9o6"/>
+                            <constraint firstItem="7d6-o5-vd9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KcA-Ga-tdq"/>
+                            <constraint firstItem="Jtu-Zk-0K8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NzD-bI-OSn"/>
+                            <constraint firstItem="V7b-C3-63v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SXj-VK-E9y"/>
+                            <constraint firstItem="V7b-C3-63v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Xge-K3-LgI"/>
+                            <constraint firstItem="Jtu-Zk-0K8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="eyI-ra-bPE"/>
+                            <constraint firstItem="Jtu-Zk-0K8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-50" id="psu-3o-YWB"/>
+                            <constraint firstAttribute="trailing" secondItem="Jtu-Zk-0K8" secondAttribute="trailing" id="sfk-fo-Ru0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="timerButtonLabel" destination="7d6-o5-vd9" id="GiF-Hg-yeM"/>
+                        <outlet property="timerLabel" destination="Jtu-Zk-0K8" id="kqt-sw-E4i"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
